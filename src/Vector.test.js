@@ -24,6 +24,12 @@ describe('Vector class', () => {
     expect(vector.y).toBe(8.2);
   });
 
+  test('iterability', () => {
+    let vector = new Vector(39.2, -17.88);
+
+    expect([...vector]).toStrictEqual([39.2, -17.88]);
+  });
+
   test('`magnitude` getter', () => {
     let vector = new Vector(26, -59);
 
