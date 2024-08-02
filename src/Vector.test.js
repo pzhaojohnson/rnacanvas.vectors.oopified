@@ -16,4 +16,10 @@ describe('Vector class', () => {
     vector.y = 8.2;
     expect(vector.y).toBe(8.2);
   });
+
+  test('`magnitude` getter', () => {
+    let vector = new Vector(26, -59);
+
+    expect(vector.magnitude).toBeCloseTo(64.47480127925948);
+  });
 });
