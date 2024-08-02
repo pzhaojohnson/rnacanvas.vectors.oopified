@@ -1,6 +1,13 @@
 import { Vector } from './Vector';
 
 describe('Vector class', () => {
+  test('`matching()` static method', () => {
+    let vector = Vector.matching({ x: 28.7, y: -101.25 });
+
+    expect(vector.x).toBe(28.7);
+    expect(vector.y).toBe(-101.25);
+  });
+
   test('`x` property', () => {
     let vector = new Vector(28.4, 99.3);
     expect(vector.x).toBe(28.4);

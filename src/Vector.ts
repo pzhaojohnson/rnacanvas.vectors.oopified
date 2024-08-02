@@ -1,7 +1,16 @@
+type VectorLike = {
+  x: number;
+  y: number;
+};
+
 /**
  * A two-dimensional vector.
  */
 export class Vector {
+  static matching(vectorLike: VectorLike): Vector {
+    return new Vector(vectorLike.x, vectorLike.y);
+  }
+
   constructor(public x: number, public y: number) {}
 
   get magnitude(): number {
