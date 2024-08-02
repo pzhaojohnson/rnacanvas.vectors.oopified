@@ -22,4 +22,19 @@ describe('Vector class', () => {
 
     expect(vector.magnitude).toBeCloseTo(64.47480127925948);
   });
+
+  test('`direction` getter', () => {
+    let vector = new Vector(100, 0);
+    expect(vector.direction).toBeCloseTo(0);
+
+    vector.y = 100;
+    expect(vector.direction).toBeCloseTo(Math.PI / 4);
+
+    vector.x = 0;
+    expect(vector.direction).toBeCloseTo(Math.PI / 2);
+
+    vector.x = -74;
+    vector.y = -128;
+    expect(vector.direction).toBeCloseTo(-2.09497595557781);
+  });
 });
