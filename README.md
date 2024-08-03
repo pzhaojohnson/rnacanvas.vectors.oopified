@@ -8,7 +8,7 @@ npm install @rnacanvas/vectors.oopified
 
 # Usage
 
-All exports of this package can be accessed as naked imports.
+All exports of this package can be accessed as named imports.
 
 ```javascript
 // an example import
