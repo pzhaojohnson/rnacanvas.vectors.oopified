@@ -62,3 +62,15 @@ vector.x = -100;
 vector.y = -100;
 vector.direction; // -3 * Math.PI / 4
 ```
+
+### `static matching()`
+
+Create a new vector instance matching a vector-like object
+(e.g., an object with `x` and `y` properties).
+
+```javascript
+var vector = Vector.matching({ x: 57, y: 36 });
+
+vector.x; // 57
+vector.y; // 36
+```
