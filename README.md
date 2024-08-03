@@ -1,5 +1,7 @@
 # Installation
 
-With npm:
+With `npm`:
 
+```
 npm install @rnacanvas/vectors.oopified
+```
