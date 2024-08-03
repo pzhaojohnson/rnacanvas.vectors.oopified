@@ -28,6 +28,9 @@ vector.y; // -88.2
 // vectors are mutable
 vector.x = -101.4;
 vector.y = 18.9;
+
+// vectors are iterable
+[...vector]; // [-101.4, 18.9]
 ```
 
 ### `magnitude`
