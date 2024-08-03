@@ -29,3 +29,13 @@ vector.y; // -88.2
 vector.x = -101.4;
 vector.y = 18.9;
 ```
+
+### `magnitude`
+
+The magnitude of the vector.
+
+```javascript
+var vector = new Vector(5, 12);
+
+vector.magnitude; // 13
+```
