@@ -14,3 +14,18 @@ All exports of this package can be accessed as naked imports.
 // an example import
 import { Vector } from '@rnacanvas/vectors.oopified';
 ```
+
+## `Vector`
+
+The `Vector` class represents a two-dimensional vector.
+
+```javascript
+var vector = new Vector(56.1, -88.2);
+
+vector.x; // 56.1
+vector.y; // -88.2
+
+// vectors are mutable
+vector.x = -101.4;
+vector.y = 18.9;
+```
