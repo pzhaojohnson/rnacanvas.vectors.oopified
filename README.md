@@ -42,3 +42,23 @@ var vector = new Vector(5, 12);
 
 vector.magnitude; // 13
 ```
+
+### `direction`
+
+The angle (in radians) that is the direction of the vector
+in the standard Cartesian coordinate system.
+
+```javascript
+var vector = new Vector(100, 0);
+vector.direction; // 0
+
+vector.y = 100;
+vector.direction; // Math.PI / 4
+
+vector.x = 0;
+vector.direction; // Math.PI / 2
+
+vector.x = -100;
+vector.y = -100;
+vector.direction; // -3 * Math.PI / 4
+```
