@@ -2,10 +2,15 @@ import { Vector } from './Vector';
 
 describe('Vector class', () => {
   test('`matching()` static method', () => {
-    let vector = Vector.matching({ x: 28.7, y: -101.25 });
+    var vector = Vector.matching({ x: 28.7, y: -101.25 });
 
-    expect(vector.x).toBe(28.7);
-    expect(vector.y).toBe(-101.25);
+    expect(vector.magnitude).toBeCloseTo((28.7**2 + (-101.25)**2)**0.5);
+    expect(vector.direction).toBeCloseTo(Math.atan2(-101.25, 28.7));
+
+    var vector = Vector.matching({ magnitude: 54, direction: -2 * Math.PI / 1.5 });
+
+    expect(vector.x).toBeCloseTo(54 * Math.cos(-2 * Math.PI / 1.5));
+    expect(vector.y).toBeCloseTo(54 * Math.sin(-2 * Math.PI / 1.5));
   });
 
   test('`x` property', () => {

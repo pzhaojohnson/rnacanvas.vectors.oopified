@@ -4,8 +4,20 @@ import type { VectorLike } from './VectorLike';
  * A two-dimensional vector.
  */
 export class Vector {
-  static matching(vectorLike: VectorLike): Vector {
-    return new Vector(vectorLike.x, vectorLike.y);
+  static matching(v: VectorLike): Vector {
+    let x = 'x' in v ? (
+      v.x
+    ) : (
+      v.magnitude * Math.cos(v.direction)
+    );
+
+    let y = 'y' in v ? (
+      v.y
+    ) : (
+      v.magnitude * Math.sin(v.direction)
+    );
+
+    return new Vector(x, y);
   }
 
   constructor(public x: number, public y: number) {}
