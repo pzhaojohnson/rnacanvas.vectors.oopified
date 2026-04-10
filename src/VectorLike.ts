@@ -1,6 +1,6 @@
 export type VectorLike = (
   {
-    x: number;
-    y: number;
+    readonly x: number;
+    readonly y: number;
   }
 );
