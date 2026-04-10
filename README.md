@@ -65,7 +65,7 @@ vector.direction; // -3 * Math.PI / 4
 
 ### `static matching()`
 
-Creates a new vector instance with same X and Y components
+Creates a new vector instance with the same X and Y components
 (and magnitude and direction)
 as the input vector-like object.
 
