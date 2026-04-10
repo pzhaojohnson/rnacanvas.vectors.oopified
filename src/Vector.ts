@@ -1,7 +1,4 @@
-type VectorLike = {
-  x: number;
-  y: number;
-};
+import type { VectorLike } from './VectorLike';
 
 /**
  * A two-dimensional vector.
