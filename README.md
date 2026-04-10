@@ -76,6 +76,11 @@ var vector = Vector.matching({ x: 57, y: 36 });
 
 vector.x; // 57
 vector.y; // 36
+
+vector = Vector.matching({ magitude: 2, direction: Math.PI / 3 });
+
+vector.x; // 1
+vector.y; // 3**0.5
 ```
 
 ## `type VectorLike`
@@ -83,8 +88,18 @@ vector.y; // 36
 For objects that are similar to vectors.
 
 ```typescript
-type VectorLike = {
-  x: number;
-  y: number;
-};
+type VectorLike = (
+  {
+    readonly x: number;
+    readonly y: number;
+  }
+  | {
+    readonly magnitude: number;
+
+    /**
+     * In radians.
+     */
+    readonly direction: number;
+  }
+);
 ```
