@@ -65,12 +65,24 @@ vector.direction; // -3 * Math.PI / 4
 
 ### `static matching()`
 
-Create a new vector instance matching a vector-like object
-(e.g., an object with `x` and `y` properties).
+Create a new vector instance matching a `VectorLike` object.
+
+(See type definition below for `VectorLike` objects.)
 
 ```javascript
 var vector = Vector.matching({ x: 57, y: 36 });
 
 vector.x; // 57
 vector.y; // 36
+```
+
+## `type VectorLike`
+
+For objects that are similar to vectors.
+
+```typescript
+type VectorLike = {
+  x: number;
+  y: number;
+};
 ```
