@@ -103,3 +103,26 @@ type VectorLike = (
   }
 );
 ```
+
+## `function isVectorLike()`
+
+Returns `true` if a value is a `VectorLike` object.
+
+Returns `false` otherwise.
+
+```javascript
+isVectorLike({ x: 10, y: 20 }); // true
+
+// missing X or Y components
+isVectorLike({ x: 10 }); // false
+isVectorLike({ y: 20 }); // false
+
+isVectorLike({ magnitude: 100, direction: Math.PI / 3 }); // true
+
+// magnitude or direction are the wrong type
+isVectorLike({ magnitude: 100, direction: 'Math.PI / 3' }); // false
+isVectorLike({ magnitude: null, direction: Math.PI / 3 }); // false
+
+// this is technically allowed as well
+isVectorLike({ x: 10, y: 20, magnitude: 100, direction: Math.PI / 3 }); // true
+```
