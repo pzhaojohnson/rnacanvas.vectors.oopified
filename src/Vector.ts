@@ -1,5 +1,7 @@
 import type { VectorLike } from './VectorLike';
 
+import { isFiniteNumber } from '@rnacanvas/value-check';
+
 /**
  * A two-dimensional vector.
  */
@@ -50,5 +52,14 @@ export class Vector {
 
     this.x = magnitude * Math.cos(direction);
     this.y = magnitude * Math.sin(direction);
+  }
+
+  /**
+   * Returns `true` if the X and Y components and magnitude / direction of this vector are all finite numbers.
+   *
+   * Returns `false` otherwise.
+   */
+  isFinite(): boolean {
+    return isFiniteNumber(this.x) && isFiniteNumber(this.y);
   }
 }

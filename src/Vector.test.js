@@ -79,4 +79,17 @@ describe('Vector class', () => {
     expect(vector.x).toBeCloseTo((57**2 + 88**2)**0.5 * Math.cos((-1.2) * Math.PI));
     expect(vector.y).toBeCloseTo((57**2 + 88**2)**0.5 * Math.sin((-1.2) * Math.PI));
   });
+
+  test('`isFinite()`', () => {
+    var vector = new Vector(10, 20);
+    expect(vector.isFinite()).toBe(true);
+
+    // nonfinite X component
+    var vector = new Vector(NaN, 20);
+    expect(vector.isFinite()).toBe(false);
+
+    // nonfinite Y component
+    var vector = new Vector(10, Infinity);
+    expect(vector.isFinite()).toBe(false);
+  });
 });
