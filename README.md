@@ -157,7 +157,7 @@ isVectorLike(undefined); // false
 
 ### `function isFiniteVectorLike()`
 
-Same as the `isFiniteVector()` function
+Same as the `isVectorLike()` function
 except only returns when the components values of a vector-like object are all finite numbers.
 
 ```javascript
