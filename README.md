@@ -71,14 +71,17 @@ Returns `false` otherwise.
 
 ```javascript
 var vector = new Vector(10, 20);
+
 vector.isFinite(); // true
 
 // nonfinite X component
 var vector = new Vector(NaN, 20);
+
 vector.isFinite(); // false
 
 // nonfinite Y component
 var vector = new Vector(10, Infinity);
+
 vector.isFinite(); // false
 ```
 
