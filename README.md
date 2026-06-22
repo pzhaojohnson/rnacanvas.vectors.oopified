@@ -63,6 +63,25 @@ vector.y = -100;
 vector.direction; // -3 * Math.PI / 4
 ```
 
+### `isFinite()`
+
+Returns `true` if the X and Y components and magnitude / direction of a vector are all finite numbers.
+
+Returns `false` otherwise.
+
+```javascript
+var vector = new Vector(10, 20);
+vector.isFinite(); // true
+
+// nonfinite X component
+var vector = new Vector(NaN, 20);
+vector.isFinite(); // false
+
+// nonfinite Y component
+var vector = new Vector(10, Infinity);
+vector.isFinite(); // false
+```
+
 ### `static matching()`
 
 Creates a new vector instance with the same X and Y components
