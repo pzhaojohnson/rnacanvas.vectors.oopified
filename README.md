@@ -154,3 +154,22 @@ isVectorLike(true); // false
 isVectorLike(null); // false
 isVectorLike(undefined); // false
 ```
+
+### `function isFiniteVectorLike()`
+
+Same as the `isFiniteVector()` function
+except only returns when the components values of a vector-like object are all finite numbers.
+
+```javascript
+isFiniteVectorLike({ x: 10, y: 20 }); // true
+
+// nonfinite X or Y components
+isFiniteVectorLike({ x: NaN, y: 20 }); // false
+isFiniteVectorLike({ x: 10, y: Infinity }); // false
+
+isFiniteVectorLike({ magnitude: 100, direction: Math.PI / 3 }); // true
+
+// nonfinite magnitude or direction
+isFiniteVectorLike({ magnitude: -Infinity, direction: Math.PI / 3 }); // false
+isFiniteVectorLike({ magnitude: 100, direction: NaN }); // false
+```
