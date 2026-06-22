@@ -3,3 +3,6 @@ export { Vector };
 
 import type { VectorLike } from './VectorLike';
 export type { VectorLike };
+
+import { isVectorLike } from './isVectorLike';
+export { isVectorLike };
