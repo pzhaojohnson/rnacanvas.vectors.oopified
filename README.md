@@ -125,4 +125,10 @@ isVectorLike({ magnitude: null, direction: Math.PI / 3 }); // false
 
 // this is technically allowed as well
 isVectorLike({ x: 10, y: 20, magnitude: 100, direction: Math.PI / 3 }); // true
+
+// some random values
+isVectorLike('asdf'); // false
+isVectorLike(true); // false
+isVectorLike(null); // false
+isVectorLike(undefined); // false
 ```
