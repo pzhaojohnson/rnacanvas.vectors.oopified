@@ -158,7 +158,7 @@ isVectorLike(undefined); // false
 ### `function isFiniteVectorLike()`
 
 Same as the `isVectorLike()` function
-except only returns when the components values of a vector-like object are all finite numbers.
+except only returns `true` when the component values of a vector-like object are all finite numbers.
 
 ```javascript
 isFiniteVectorLike({ x: 10, y: 20 }); // true
