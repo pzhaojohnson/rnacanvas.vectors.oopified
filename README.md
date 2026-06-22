@@ -172,4 +172,10 @@ isFiniteVectorLike({ magnitude: 100, direction: Math.PI / 3 }); // true
 // nonfinite magnitude or direction
 isFiniteVectorLike({ magnitude: -Infinity, direction: Math.PI / 3 }); // false
 isFiniteVectorLike({ magnitude: 100, direction: NaN }); // false
+
+// some random values
+isFiniteVectorLike('asdf'); // false
+isFiniteVectorLike(true); // false
+isFiniteVectorLike(null); // false
+isFiniteVectorLike(undefined); // false
 ```
